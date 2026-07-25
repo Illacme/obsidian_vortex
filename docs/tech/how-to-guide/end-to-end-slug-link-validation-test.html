@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="de" data-theme="dark">
+<html lang="zh" data-theme="dark">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edge Case: Test für seltsame Slugs und Sonderzeichen in URLs | Obsidian vortex</title>
-    <meta name="description" content="Testet, wie das System mit ungewöhnlichen Slugs und Sonderzeichen umgeht – ein entscheidender Edge Case für die URL-Normalisierung.">
-    <meta name="keywords" content="Edge Cases, URL-Normalisierung, Sonderzeichen, Slug-Tests, Systemtests, URL-Slugs, Webtesting">
+    <title>端到端 Slug 链路验证测试 | Obsidian vortex</title>
+    <meta name="description" content="端到端 Slug 链路验证测试：自动化实测稿件，用于真刀真枪验证 Slug 处理逻辑。具备自动探测算力连通性、拼音降级自愈保障及物理静态编译与 URL 路由对正等核心特性。">
+    <meta name="keywords" content="Slug, 链路验证, 自动化测试, 算力连通性, 拼音降级, 自愈保障, 静态编译, URL 路由">
 
     <!-- 🎨 自定义样式与视觉特效热配置注入 -->
     <style>
@@ -18,41 +18,41 @@
 </style>
 
     <!-- 🏗️ 字体系统本地主权注入 -->
-    <link rel="stylesheet" href="../../static/css/fonts.css">
+    <link rel="stylesheet" href="../../../../static/css/fonts.css">
 
     <!-- 🏗️ 主权视觉系统物理注入 -->
-    <link rel="stylesheet" href="../../static/css/style.css?v=15.1">
-    <link rel="icon" type="image/png" href="../../favicon.png">
+    <link rel="stylesheet" href="../../../../static/css/style.css?v=15.1">
+    <link rel="icon" type="image/png" href="../../../../favicon.png">
 
     <!-- 🔍 SEO & Social Media Matrix -->
-    <link rel="canonical" href="/de/docs/zh/edgecase.html">
-    <meta property="og:title" content="Edge Case: Test für seltsame Slugs und Sonderzeichen in URLs | Obsidian vortex">
-    <meta property="og:description" content="Testet, wie das System mit ungewöhnlichen Slugs und Sonderzeichen umgeht – ein entscheidender Edge Case für die URL-Normalisierung.">
+    <link rel="canonical" href="/docs/zh/end-to-end-slug-link-validation-test.html">
+    <meta property="og:title" content="端到端 Slug 链路验证测试 | Obsidian vortex">
+    <meta property="og:description" content="端到端 Slug 链路验证测试：自动化实测稿件，用于真刀真枪验证 Slug 处理逻辑。具备自动探测算力连通性、拼音降级自愈保障及物理静态编译与 URL 路由对正等核心特性。">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="/de/docs/zh/edgecase.html">
+    <meta property="og:url" content="/docs/zh/end-to-end-slug-link-validation-test.html">
     <meta name="twitter:card" content="summary_large_image">
 </head>
 
-<body class="sovereign-engine" data-root-path="../../">
+<body class="sovereign-engine" data-root-path="../../../../">
 
     <!-- 🌐 顶部全息导航 (Glassmorphism) -->
     <header class="glass-header">
         <div class="header-container">
             <div class="header-left">
-                <a href="../../index.html" class="logo-group">
+                <a href="../../../../index.html" class="logo-group">
                     <span class="logo-icon">🧬</span>
                     <span class="logo-text">Obsidian vortex</span>
                 </a>
                 <nav class="desktop-nav">
-                    <a href="../../blog/index.html">Blog</a>
-                    <a href="../../docs/index.html">Dokumentation</a>
-                    <a href="../../showcase.html">Galerie</a>
-                    <a href="../../about.html">Über uns</a>
+                    <a href="../../../../blog/index.html">Blog</a>
+                    <a href="../../../../docs/index.html">Docs</a>
+                    <a href="../../../../showcase.html">Showcase</a>
+                    <a href="../../../../about.html">About</a>
                 </nav>
                 <!-- 🔍 物理搜索索引 -->
                 <div class="search-hub">
                     <input type="text" id="search-input" class="search-control"
-                        placeholder="Suchen...">
+                        placeholder="Search Assets...">
                     <div id="search-results" class="search-dropdown"></div>
                 </div>
             </div>
@@ -70,8 +70,8 @@
                     <div class="lang-selector">
                         <select class="control-select" onchange="window.location.href=this.value">
                             <option value="" disabled>🌐 Language</option>
-                            <option value="../../docs/zh/edgecase.html" >🇨🇳 简体中文</option>
-<option value="../../de/docs/zh/edgecase.html" selected>🇩🇪 Deutsch</option>
+                            <option value="../../../../docs/zh/tech/how-to-guide/end-to-end-slug-link-validation-test.html" selected>🇨🇳 简体中文</option>
+<option value="../../../../de/docs/zh/tech/how-to-guide/end-to-end-slug-link-validation-test.html" >🇩🇪 Deutsch</option>
                         </select>
                     </div>
                     <!-- 📱 移动端菜单开关 -->
@@ -101,15 +101,20 @@
         <main class="content-gate">
             <div class="content-wrapper">
                 <article class="prose-sovereign">
-                    <p>Testen, wie das System mit seltsamen Slugs und Sonderzeichen in Titeln umgeht. Dies ist ein kritischer Randfall für die URL-Normalisierung.<br />
-test ok<br />
-Verwandte Links: [[long_cn.md]]</p>
-<!-- Sovereign-Tag: [[AEL-Iter-ID: Sync:edge_case.md]] -->
+                    <h1 id="slug">端到端 Slug 链路验证测试</h1>
+<p>这是用于真刀真枪验证 <strong>Slug 处理逻辑</strong> 的自动化实测稿件。</p>
+<h2 id="_1">核心特性</h2>
+<ul>
+<li>自动探测算力连通性</li>
+<li>拼音降级自愈保障</li>
+<li>物理静态编译与 URL 路由对正</li>
+</ul>
+<!-- Sovereign-Tag: [[AEL-Iter-ID: Sync:e2e_slug_tes]] -->
                 </article>
 
                 <!-- 🌲 动态目录 (Only for docs/blog) -->
                 <aside class="toc-pioneer" id="dynamic-toc">
-                    <div class="toc-title">Inhaltsverzeichnis</div>
+                    <div class="toc-title">Table of Contents</div>
                     <nav class="toc-list" id="toc-container"></nav>
                 </aside>
             </div>
@@ -119,16 +124,16 @@ Verwandte Links: [[long_cn.md]]</p>
                 <div class="footer-line"></div>
                 <p>&copy; 2026 Obsidian vortex. Generated by <a href="https://github.com/Illacme/illacme-plenipes"
                         class="engine-link">Illacme-plenipes V6.2.1</a></p>
-                <p class="slogan">Physische Souveränität, kohärentes Wachstum.</p>
+                <p class="slogan">Physical Sovereignty, Self-Consistent Growth.</p>
             </footer>
         </main>
     </div>
 
     <!-- 🧠 极简交互引擎物理注入 -->
-    <script src="../../static/js/main.theme.js"></script>
-    <script src="../../static/js/main.toc.js"></script>
-    <script src="../../static/js/main.search.js"></script>
-    <script src="../../static/js/main.js"></script>
+    <script src="../../../../static/js/main.theme.js"></script>
+    <script src="../../../../static/js/main.toc.js"></script>
+    <script src="../../../../static/js/main.search.js"></script>
+    <script src="../../../../static/js/main.js"></script>
 </body>
 
 </html>
